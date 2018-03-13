@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="WebUntis" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="WebUntisUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">https://euterpe.webuntis.com/WebUntis/jsonrpc.do?school=htl-perg</Value>
+    </Setting>
+    <Setting Name="Language" Type="System.String" Scope="User">
+      <Value Profile="(Default)">de,en-US;q=0.7,en;q=0.3</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
