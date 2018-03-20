@@ -6,7 +6,7 @@ This repo contains a the implementation of a WebUntisClient written in C#.
 
 an API for accessing WebUntis functionality based on [JSON-RPC 2.0]( http://groups.google.com/group/json-rpc/web/json-rpc-2-0 )
 
-Service-URL: http(s)://<SERVER>/WebUntis/jsonrpc.do
+Service-URL: http(s)://\<SERVER\>/WebUntis/jsonrpc.do
 
 requests must use POST
 
