@@ -2,7 +2,8 @@
 
 This repo contains a the implementation of a WebUntisClient written in C#.
 
-#WebUntis JSON-RPC API
+## WebUntis JSON-RPC API
+
 an API for accessing WebUntis functionality based on [JSON-RPC 2.0]( http://groups.google.com/group/json-rpc/web/json-rpc-2-0 )
 
 Service-URL: http(s)://<SERVER>/WebUntis/jsonrpc.do
@@ -45,7 +46,7 @@ Each section defines a method (function) of the API and describes
 
 Additionally there are often given examples and sometimes special remarks.
 
-## Authentication
+### Authentication
 Authenticate the given user and start a session
 
 | Field         | Value        |
@@ -76,7 +77,7 @@ result:
 | personId | ID of person |
 | jsessionid | All other methods require the result from authentication ( = sessionId), either per pathparameter or per cookie (RequestHeader)|
 
-## Logout
+### Logout
 
 End the session
 
@@ -91,7 +92,7 @@ End the session
 
 An application should always logout as soon as possible to free system resources on the server.
 
-## Request teachers
+### Request teachers
 
 Get list of teachers
 
@@ -115,14 +116,14 @@ Get list of teachers
 ...]}
 ```
 
-## Request base classes
+### Request base classes
 
 
 | Field         | Value        |
 |:--------------|:-------------|
 | method name   | getKlassen   |
 | right         | -            |
-| parameters    | schoolyearId: defautl current year |
+| parameters    | schoolyearId: default current year |
 
 ```
 {"id":"ID","method":"getKlassen","params": 
@@ -138,7 +139,7 @@ Get list of teachers
 ...]}
 ```
 
-## Request subjects
+### Request subjects
 
 Get list of subjects
 
@@ -159,7 +160,7 @@ Religion","foreColor":"000000","backColor":"000000"},
 ```
 
 
-## Request holidays
+### Request holidays
 
 Get list of holidays
 
@@ -178,7 +179,7 @@ ate":20101026},
 ...]}
 ```
 
-## Request timegrid
+### Request timegrid
 
 Get timegrid
 
