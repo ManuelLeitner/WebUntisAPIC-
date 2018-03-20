@@ -107,6 +107,11 @@ namespace WebUntis {
         private void ClosingWindow(object sender, System.ComponentModel.CancelEventArgs e) {
             Connector?.Logout();
         }
+
+        private void Refresh(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("TEST");
+        }
     }
 
     public class ColorToBrush : IValueConverter {

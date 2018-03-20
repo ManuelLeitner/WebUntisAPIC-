@@ -144,7 +144,10 @@ namespace WebUntis.Connector {
         }
 
         public void Logout() {
-            CommunicateJson(new Request(RequestType.Logout));
+            if(Credentials != null)
+            {
+                CommunicateJson(new Request(RequestType.Logout));
+            }
         }
     }
 }
