@@ -72,12 +72,8 @@ namespace WebUntis {
                 int columnCount = timeTable.Days;
                 int rowCount = timeTable.LongestDayMinutes / 5 + 1;
 
-                /*	ColumnDefinitionCollection columns = ClassGrid.ColumnDefinitions;
-                    for(int i = 0; i < columnCount; i++) {
-                        columns.Add(new ColumnDefinition());
-                    }  */
-
                 RowDefinitionCollection rows = ClassGrid.RowDefinitions;
+                rows.Clear();
                 for (int i = 0; i < rowCount; i++) {
                     rows.Add(new RowDefinition());
                 }
