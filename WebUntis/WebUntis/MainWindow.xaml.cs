@@ -22,13 +22,13 @@ namespace WebUntis {
 
         private void Authenticate(object sender, RoutedEventArgs e) {
             Connector = new WebUntisConnector(User);
-            try {
+            try
+            {
                 Connector.Authenticate();
                 Credentials.Content = Connector.Credentials;
                 Load();
-            } catch (Exception ex) {
-                MessageBox.Show(ex.Message);
             }
+            catch (Exception) { }        
         }
 
         public void Load() {
