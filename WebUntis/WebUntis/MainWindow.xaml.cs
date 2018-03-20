@@ -110,7 +110,11 @@ namespace WebUntis {
 
         private void Refresh(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("TEST");
+            if(Connector.Credentials != null)
+            {
+                Load();
+                Console.WriteLine("Refreshed");
+            }
         }
     }
 
