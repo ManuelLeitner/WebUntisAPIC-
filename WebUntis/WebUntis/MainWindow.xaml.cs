@@ -82,9 +82,15 @@ namespace WebUntis {
 
                 foreach (TimeTableField field in timeTable.Fields) {
                     Label lbl = new Label();
-                    if (field.Subjects.Length > 0)
-                        lbl.Content = field.Subjects[0].Id;
                     lbl.Background = Brushes.Red;
+                    if (field.Subjects.Length > 0) {
+                        int id = field.Subjects[0].Id;
+                        var subject = Connector.Subjects[id];
+                        lbl.Content = subject;
+                        lbl.Foreground = new SolidColorBrush(subject.ForegroundColor);
+                        lbl.Background = new SolidColorBrush(subject.BackgroundColor);
+                    }
+
                     int column = (field.StartTime - timeTable.MinDate).Days;
                     int row = (TimeTable.MinutesOfDay(field.StartTime) - timeTable.EarliestLessonMinute) / 5;
                     int rowSpan = (TimeTable.MinutesOfDay(field.EndTime) - TimeTable.MinutesOfDay(field.StartTime)) / 5;
