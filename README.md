@@ -76,4 +76,126 @@ result:
 | personId | ID of person |
 | jsessionid | All other methods require the result from authentication ( = sessionId), either per pathparameter or per cookie (RequestHeader)|
 
+## Logout
 
+End the session
+
+| Field         | Value        |
+|:--------------|:-------------|
+| method name   | logout       |
+| right         | -            |
+
+```
+{"id":"ID","method":"logout","params":{},"jsonrpc":"2.0"}
+```
+
+An application should always logout as soon as possible to free system resources on the server.
+
+## Request teachers
+
+Get list of teachers
+
+
+| Field         | Value        |
+|:--------------|:-------------|
+| method name   | getTeachers  |
+| right         | -            |
+| parameters    | -            |
+
+```
+{"id":"ID","method":"getTeachers","params":{},"jsonrpc":"2.0"}
+```
+
+```
+{"jsonrpc":"2.0","id":"ID","result":[ 
+{"id":1,"name":"Bach","foreName":"Ingeborg","longName":"Bachmann","foreColor":"0
+00000","backColor":"000000"}, 
+{"id":2,"name":"Foss","foreName":"Dian","longName":"Fossey","foreColor":"000000"
+,"backColor":"000000"}, 
+...]}
+```
+
+## Request base classes
+
+
+| Field         | Value        |
+|:--------------|:-------------|
+| method name   | getKlassen   |
+| right         | -            |
+| parameters    | schoolyearId: defautl current year |
+
+```
+{"id":"ID","method":"getKlassen","params": 
+{"schoolyearId":"SCHOOLYEARID"},"jsonrpc":"2.0"}
+```
+
+```
+{"jsonrpc":"2.0","id":"ID","result":[ 
+{"id":71,"name":"1A","longName":"Klasse
+1A","foreColor":"000000","backColor":"000000",did:2}, 
+{"id":72,"name":"1B","longName":"Klasse
+1B","foreColor":"000000","backColor":"000000"}, 
+...]}
+```
+
+## Request subjects
+
+Get list of subjects
+
+| Field         | Value        |
+|:--------------|:-------------|
+| method name   | getSubjects  |
+| right         | -            |
+| parameters    | -            |
+
+
+```
+{"jsonrpc":"2.0","id":"ID","result":[ 
+{"id":1,"name":"RK","longName":"Kath.Religion","foreColor":"000000","backColor":
+"000000"}, 
+{"id":2,"name":"RE","longName":"Evang.
+Religion","foreColor":"000000","backColor":"000000"}, 
+...]}
+```
+
+
+## Request holidays
+
+Get list of holidays
+
+| Field         | Value        |
+|:--------------|:-------------|
+| method name   | getHolidays  |
+| right         | -            |
+| parameters    | -            |
+
+```
+{"jsonrpc":"2.0","id":"ID","result":[ 
+{"id":44,"name":"Natio","longName":"Nationalfeiertag","startDate":20101026,"endD
+ate":20101026}, 
+{"id":42,"name":"Allerheiligen","longName":"Allerheiligen","startDate":20101101,
+"endDate":20101101}, 
+...]}
+```
+
+## Request timegrid
+
+Get timegrid
+
+| Field         | Value        |
+|:--------------|:-------------|
+| method name   | getTimegridUnits |
+| right         | -            |
+| parameters    | -            |
+
+```
+{"jsonrpc":"2.0","id":"ID","result":[ 
+{"day":0,"timeUnits":[{"startTime":800,"endTime":850},
+{"startTime":855,"endTime":945},{"startTime":1000,"endTime":1050}, 
+...],
+{"day":1,"timeUnits":[{"startTime":800,"endTime":850}, 
+...],
+...]}
+```
+
+1 = sunday, 2 = monday, ..., 7 = saturday
