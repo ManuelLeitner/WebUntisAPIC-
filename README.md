@@ -1,6 +1,6 @@
 # WebUntis_API_C_Sharp
 
-This repo contains a the implementation of a WebUntisClient written in C#.
+This repo contains the implementation of a WebUntisClient written in C#.
 
 ## WebUntis JSON-RPC API
 
